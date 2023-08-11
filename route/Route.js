@@ -22,13 +22,14 @@ router.get('/new', pokeController.new)
 // router.put('/:indexOfPokemon', pokeController.update)
 
 // "create" route
-router.post('/', pokeController.new)
+router.get('/', pokeController.new)
+router.post('/',pokeController.create)
 
 // // "edit" route
 // router.get('/:indexOfPokemon/edit', pokeController.edit)
 
 // // "show" route      //   localhost:8080/fruits/:indexOfFruit
-router.get('/:id', pokeController.show)
+router.get('/:indexOfPokemon', pokeController.show)
 
 
 module.exports = router

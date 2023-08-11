@@ -1,8 +1,8 @@
 const mongoose = require('mongoose')
 
-const schema = mongoose.Schema()
+const Schema = mongoose.Schema
 
-const pokeSchema = new schema({
+const pokeSchema = new Schema({
     name: {
         type: String,
         required: true
@@ -13,6 +13,6 @@ const pokeSchema = new schema({
     },
 })
 
-const pokemon = mongoose.model('pokemonData/PD',pokeSchema)
+const Pokemon = mongoose.model('pokemonData/PD',pokeSchema)
 
-module.exports = pokemon
+module.exports = Pokemon

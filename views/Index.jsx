@@ -1,15 +1,17 @@
 import React from 'react'
 
 function Index({pokemon}) {
-    console.log(pokemon[0].name)
+   
   return (
-    <div>Index
-         {pokemon.map((poke,i)=>
+    <div>
+         {pokemon? <>{pokemon.map((poke,i)=>
             <div key={i}>
-            <a href={`/pokemon/${i}`}>{poke.name[0].toUpperCase()+ poke.name.slice(1)}</a>
+            <a href={`/pokemon/${poke._id}`}>{poke.name[0].toUpperCase()+ poke.name.slice(1)}</a>
             </div>
             )}
-            <a href={`/pokemon/new`}>NEW</a>
+            <a href={`/pokemon/new`}>NEW</a></>:<div>
+              <a href='/pokemon/new'><h1>Go get some Pokemon</h1></a></div>
+              }
     </div>
   )
 }
