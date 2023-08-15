@@ -1,7 +1,7 @@
 import React from 'react'
 
 function Index({pokemon}) {
-   
+  
   return (
     <div>
          {pokemon? <>{pokemon.map((poke,i)=>

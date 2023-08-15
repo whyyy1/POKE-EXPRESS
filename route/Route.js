@@ -20,16 +20,24 @@ router.get('/new', pokeController.new)
 
 // // "update" route
 // router.put('/:indexOfPokemon', pokeController.update)
+// // "show" route      //   localhost:8080/fruits/:indexOfFruit
+router.get('/:id', pokeController.show)
 
 // "create" route
 router.get('/', pokeController.new)
+
+// "clear" route
+router.delete('/clear', pokeController.clear)
+// "destroy" route
+router.delete('/:id', pokeController.destroy)
+
+
 router.post('/',pokeController.create)
 
 // // "edit" route
 // router.get('/:indexOfPokemon/edit', pokeController.edit)
 
-// // "show" route      //   localhost:8080/fruits/:indexOfFruit
-router.get('/:indexOfPokemon', pokeController.show)
+
 
 
 module.exports = router
